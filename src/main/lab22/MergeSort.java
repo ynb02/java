@@ -1,5 +1,6 @@
 package lab22;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +18,35 @@ public class MergeSort implements Sorting<Integer> {
     }
 
     private void merge(List<Integer> nums, int start, int middle, int end) {
-        List<Integer>
+        List<Integer> left = new ArrayList<>(nums.subList(start, middle+1));
+        List<Integer> right = new ArrayList<>(nums.subList(middle+1, end+1));
+
+        int j = 0;
+        int i = 0;
+        int k = start;
+
+        while (i < left.size() && j < right.size()) {
+            if (left.get(i) <= right.get(j)) {
+                nums.set(k, left.get(i));
+                i++;
+            } else {
+                nums.set(k, right.get(j));
+                j++;
+            }
+            k++;
+        }
+
+        while (i < left.size()) {
+            nums.set(k, left.get(i));
+            i++;
+            k++;
+        }
+
+        while (j < right.size()) {
+            nums.set(k, right.get(j));
+            j++;
+            k++;
+        }
     }
 
     @Override
