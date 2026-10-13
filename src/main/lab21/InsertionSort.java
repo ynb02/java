@@ -13,8 +13,6 @@ public class InsertionSort implements Sorting<Integer> {
 
                     nums.set(j+1, nums.get(j));
                     nums.set(j, temp);
-
-                    j++;
                 }
             }
         }
