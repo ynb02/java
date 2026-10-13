@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> arr = new ArrayList<>(List.of(0,2,6,6,1,0,4,6));
-        int val = 6;
+        List<Integer> arr = new ArrayList<>(List.of(4,5,5,4));
+        int val = 4;
         System.out.println(removeElementInplace(arr, val));
     }
 
