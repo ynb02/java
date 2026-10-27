@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> arr = new ArrayList<>(List.of(4,5,5,4));
+        List<Integer> arr = new ArrayList<>(List.of(5,4,4,5));
         int val = 4;
         System.out.println(removeElementInplace(arr, val));
     }

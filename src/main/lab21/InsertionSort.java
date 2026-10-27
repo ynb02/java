@@ -12,6 +12,7 @@ public class InsertionSort implements Sorting<Integer> {
             for (j = i - 1; j >= 0 && nums.get(j) > el; j--) {
                 nums.set(j + 1, nums.get(j));
             }
+            nums.set(j + 1, el);
         }
         System.out.println(nums.stream()
                 .map(x -> String.valueOf(x))
